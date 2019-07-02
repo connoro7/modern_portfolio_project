@@ -4,6 +4,7 @@ $show-home-image: true;
 $home-image: url(../img/background.jpg); // Up one level from scss/main.scss = modern_portfolio/ THEN look in img/ folder
 $background-opacity: 0.9;
 @import 'config';
+@import 'menu';
 
 * {
     box-sizing: border-box;
@@ -34,7 +35,7 @@ h3 {
     &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5); //NOTE rgba with opacity=0.5 and sass function lighten() - Want slight shadow box around small-heading content
+        background: rgba(lighten($primary-color, 2), 0.5); // rgba with opacity=0.5 and sass function lighten() - Want slight shadow box around small-heading content
 
     }
 }
@@ -70,7 +71,7 @@ main {
                 color: $secondary-color;
                 // MOVED TRANSITION TO @mixin easeOut{}
                 //x transition: all 0.5s ease-out; // first parameter is what you want to transition, second parameter is the time it takes (specify units), third parameter is the transition style
-                @include easeOut();
+                @include easeOut;
             }
 
         }
