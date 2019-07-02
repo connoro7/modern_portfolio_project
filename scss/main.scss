@@ -1,7 +1,7 @@
-$primary-color: #969696; //#969696
-$secondary-color: #eece1a; //#eece1a
+$primary-color: #969696; //. #969696
+$secondary-color: #eece1a; //. #eece1a
 $show-home-image: true;
-$home-image: url(../img/background.jpg);
+$home-image: url(../img/background.jpg); // Up one level from scss/main.scss = modern_portfolio/ THEN look in img/ folder
 $background-opacity: 0.9;
 @import 'config';
 
@@ -34,7 +34,7 @@ h3 {
     &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5); // rgba with opacity=0.5 and sass function lighten() - Want slight shadow box around small-heading content
+        background: rgba(lighten($primary-color, 2), 0.5); //NOTE rgba with opacity=0.5 and sass function lighten() - Want slight shadow box around small-heading content
 
     }
 }
@@ -66,10 +66,10 @@ main {
             padding: 0.4rem;
 
             &:hover {
-                // &:hover within a{} is the same as a:hover in css
+                //. &:hover within a{} is the same as a:hover in css
                 color: $secondary-color;
                 // MOVED TRANSITION TO @mixin easeOut{}
-                //transition: all 0.5s ease-out; // first parameter is what you want to transition, second parameter is the time it takes (specify units), third parameter is the transition style
+                //x transition: all 0.5s ease-out; // first parameter is what you want to transition, second parameter is the time it takes (specify units), third parameter is the transition style
                 @include easeOut();
             }
 
