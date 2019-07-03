@@ -11,7 +11,7 @@ let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
 
-fucntion toggleMenu() {
+function toggleMenu() {
     if (!showMenu) {
         //
         menuBtn.classList.add('close');
@@ -33,4 +33,4 @@ fucntion toggleMenu() {
         //Set Menu State
         showMenu = true;
     }
-}
+};
