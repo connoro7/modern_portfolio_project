@@ -5,7 +5,6 @@ $home-image: url(../img/background.jpg); // Up one level from scss/main.scss = m
 $background-opacity: 0.9;
 @import 'config';
 @import 'menu';
-@import 'mobile';
 
 * {
     box-sizing: border-box;
@@ -65,6 +64,7 @@ main {
         a {
             // each <i> tag is wrapped in an <a> tag within the .icons <div> group, so let's change how all these <i> icons look and behave:
             padding: 0.4rem;
+            @include easeOut;
 
             &:hover {
                 //. &:hover within a{} is the same as a:hover in css
@@ -86,99 +86,4 @@ main {
     }
 }
 
-// ! ======================================================================
-// ! ======================================================================
-// ! ======================================================================
-// ! ======================================================================
-// ! ======================================================================
-// ! ======================================================================
-// ! ======================================================================
-// ! ======================================================================
-
-$primary-color: #969696; //. #969696
-$secondary-color: #eece1a; //. #eece1a
-$show-home-image: true;
-$home-image: url(../img/background.jpg); // Up one level from scss/main.scss = modern_portfolio/ THEN look in img/ folder
-$background-opacity: 0.9;
-@import 'config';
-@import 'menu';
 @import 'mobile';
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    @include background;
-    background: $primary-color;
-    color: #fff;
-    height: 100%;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
-}
-
-// Headings
-h1,
-h2,
-h3 {
-    margin: 0;
-    font-weight: 400;
-
-    &.lg-heading {
-        font-size: 6rem;
-    }
-
-    &.sm-heading {
-        margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5); // rgba with opacity=0.5 and sass function lighten() - Want slight shadow box around small-heading content
-
-    }
-}
-
-a {
-    color: #fff;
-    text-decoration: none;
-}
-
-header {
-    position: fixed;
-    z-index: 2; // sits on top of everything else
-    width: 100%;
-}
-
-.text-secondary {
-    color: $secondary-color;
-}
-
-main {
-    padding: 4rem;
-    height: 100%;
-
-    .icons {
-        margin-top: 1rem;
-
-        a {
-            // each <i> tag is wrapped in an <a> tag within the .icons <div> group, so let's change how all these <i> icons look and behave:
-            padding: 0.4rem;
-
-            &:hover {
-                //. &:hover within a{} is the same as a:hover in css
-                color: $secondary-color;
-                // MOVED TRANSITION TO @mixin easeOut{}
-                //x transition: all 0.5s ease-out; // first parameter is what you want to transition, second parameter is the time it takes (specify units), third parameter is the transition style
-                @include easeOut;
-            }
-
-        }
-    }
-
-    &#home {
-        overflow: hidden; // remove scrollbars from homepage
-
-        h1 {
-            margin-top: 20vh; // push homepage heading text down
-        }
-    }
-}
