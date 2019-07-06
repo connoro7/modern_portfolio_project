@@ -1,8 +1,9 @@
 $primary-color: #444; // default #444
-$secondary-color: #0003a8; // ! DEPRECATED default #eece1a
+$secondary-color: #eece1a; // ! DEPRECATED
 $show-home-image: true;
 $home-image: url(../img/background.jpg); // Up one level from scss/main.scss = modern_portfolio/ THEN look in img/ folder
 $background-opacity: .9;
+$footer-height: 60px;
 
 @mixin easeOut {
     transition: all 0.5s ease-out;
@@ -54,11 +55,11 @@ $background-opacity: .9;
 // Set Highlight Color
 @function set-highlight-color($color) {
     @if (lightness($color) > 40) {
-        @return #171abd; // color on light background
+        @return #0092cc; // color on light background
     }
 
     @else {
-        @return #006aff; // color on dark background
+        @return #4dccff; // color on dark background
     }
 }
 
