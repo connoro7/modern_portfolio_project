@@ -11,15 +11,11 @@
     <meta name="keywords" content="keyword1, key word2, key word 3">
     <meta name="author" content="Author or Business">
 
-    <title>Welcome to my Portfolio</title>
+    <title>About Me</title>
 
 </head>
 
 <body id="bg-img">
-    <!--
-        x <div class="overlay"></div>
-        Replaced with psuedo-element in main.scss >> @mixin background{} 
-    -->
     <header>
         <div class="menu-btn">
             <div class="btn-line"></div>
@@ -31,13 +27,14 @@
                 <div class="portrait"></div>
             </div>
             <ul class="menu-nav">
-                <li class="nav-item current">
-                    <!-- @NOTE Current page! Using .current -->
+                <li class="nav-item">
+
                     <a href="index.html" class="nav-link">
                         Home
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item current">
+                    <!-- @NOTE Current page! Using .current -->
                     <a href="about.html" class="nav-link">
                         About Me
                     </a>
@@ -55,28 +52,15 @@
             </ul>
         </nav>
     </header>
-    <main id="home">
-        <!-- @NOTE id="home"-->
+    <main id="about">
+        <!-- @NOTE id='about'-->
         <h1 class="lg-heading">
-            John <span class="text-secondary">Doe</span>
+            About <span class="text-secondary">Me</span>
         </h1>
         <h2 class="sm-heading">
-            Web Developer, Programmer, Designer, Entreprenuer
+            Stay awhile and listen...
         </h2>
-        <div class="icons">
-            <a href="#!">
-                <i class="fab fa-twitter fa-2x"></i>
-            </a>
-            <a href="#!">
-                <i class="fab fa-facebook fa-2x"></i>
-            </a>
-            <a href="#!">
-                <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-            <a href="#!">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
-        </div>
+
     </main>
 
     <script src="js/main.js"> </script>

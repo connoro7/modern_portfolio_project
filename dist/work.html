@@ -16,10 +16,6 @@
 </head>
 
 <body id="bg-img">
-    <!--
-        x <div class="overlay"></div>
-        Replaced with psuedo-element in main.scss >> @mixin background{} 
-    -->
     <header>
         <div class="menu-btn">
             <div class="btn-line"></div>
@@ -31,8 +27,8 @@
                 <div class="portrait"></div>
             </div>
             <ul class="menu-nav">
-                <li class="nav-item current">
-                    <!-- @NOTE Current page! Using .current -->
+                <li class="nav-item">
+
                     <a href="index.html" class="nav-link">
                         Home
                     </a>
@@ -42,7 +38,8 @@
                         About Me
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item current">
+                    <!-- @NOTE Current page! Using .current -->
                     <a href="work.html" class="nav-link">
                         My Work
                     </a>
@@ -55,8 +52,8 @@
             </ul>
         </nav>
     </header>
-    <main id="home">
-        <!-- @NOTE id="home"-->
+    <main id="work">
+        <!-- @NOTE id="work" -->
         <h1 class="lg-heading">
             John <span class="text-secondary">Doe</span>
         </h1>
