@@ -1,5 +1,5 @@
-$primary-color: #505050; //. default #969696
-$secondary-color: #eece1a; //. default #eece1a
+$primary-color: #444; // default #444
+$secondary-color: #0003a8; // ! DEPRECATED default #eece1a
 $show-home-image: true;
 $home-image: url(../img/background.jpg); // Up one level from scss/main.scss = modern_portfolio/ THEN look in img/ folder
 $background-opacity: .9;
@@ -37,6 +37,28 @@ $background-opacity: .9;
                 background: rgba($primary-color, $background-opacity);
             }
         }
+    }
+}
+
+// Set Text Color
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000; // color on light background
+    }
+
+    @else {
+        @return #fff; // color on dark background
+    }
+}
+
+// Set Highlight Color
+@function set-highlight-color($color) {
+    @if (lightness($color) > 40) {
+        @return #171abd; // color on light background
+    }
+
+    @else {
+        @return #006aff; // color on dark background
     }
 }
 

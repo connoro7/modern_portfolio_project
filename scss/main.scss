@@ -8,7 +8,7 @@
 body {
     @include background;
     background: $primary-color;
-    color: #fff;
+    color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -35,7 +35,7 @@ h3 {
 }
 
 a {
-    color: #fff;
+    color: set-text-color($primary-color);
     text-decoration: none;
 }
 
@@ -46,7 +46,7 @@ header {
 }
 
 .text-secondary {
-    color: $secondary-color;
+    color: set-highlight-color($primary-color);
 }
 
 main {
@@ -63,7 +63,7 @@ main {
 
             &:hover {
                 //. &:hover within a{} is the same as a:hover in css
-                color: $secondary-color;
+                color: set-highlight-color($primary-color);
                 // MOVED TRANSITION TO @mixin easeOut{}
                 //x transition: all 0.5s ease-out; // first parameter is what you want to transition, second parameter is the time it takes (specify units), third parameter is the transition style
                 @include easeOut;
