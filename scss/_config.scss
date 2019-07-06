@@ -1,3 +1,9 @@
+$primary-color: #505050; //. default #969696
+$secondary-color: #eece1a; //. default #eece1a
+$show-home-image: true;
+$home-image: url(../img/background.jpg); // Up one level from scss/main.scss = modern_portfolio/ THEN look in img/ folder
+$background-opacity: .9;
+
 @mixin easeOut {
     transition: all 0.5s ease-out;
 }
